@@ -1,0 +1,337 @@
+/*** colors ***/
+/*** fonts ***/
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: "MartelSans";
+  src: url("../fonts/Martel_Sans/MartelSans-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: "MartelSans";
+  src: url("../fonts/Martel_Sans/MartelSans-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: "MartelSans";
+  src: url("../fonts/Martel_Sans/MartelSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; }
+* {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: Poppins;
+  margin: 0; }
+
+.wrapper {
+  max-width: 1440px;
+  padding: 0 92px;
+  margin: 0 auto; }
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background: #31303099;
+  position: absolute;
+  z-index: 1;
+  display: none; }
+
+.header {
+  width: 100%;
+  height: 72px;
+  z-index: 20;
+  border-bottom: 1px solid #D4D7E5;
+  background: #FFFFFF;
+  position: fixed; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px; }
+  .nav__logo-container {
+    font-size: 26px;
+    font-weight: 600;
+    position: relative;
+    color: #3F4255; }
+    .nav__logo-container span {
+      display: block;
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      background: #FFE145;
+      width: 87px;
+      height: 13px;
+      z-index: -1; }
+  .nav .hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 2px 0px #0000001A;
+    width: 48px;
+    height: 48px;
+    gap: 9px; }
+    .nav .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: #9093A6; }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 72px;
+    right: 0;
+    height: 90vh;
+    width: 285px;
+    background: #FFFFFF;
+    padding: 0 36px 0;
+    color: #9093A6;
+    font-family: MartelSans, sans-serif;
+    font-weight: 700;
+    z-index: 1; }
+    .nav-menu__items {
+      list-style: none; }
+    .nav-menu__item {
+      padding: 22px 0;
+      border-top: 1px solid #F2F4FA; }
+    .nav-menu__lang {
+      border-top: 1px solid #F2F4FA;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      font-weight: 800;
+      justify-content: flex-end;
+      padding-top: 28px; }
+      .nav-menu__lang-arrow {
+        height: 24px; }
+    .nav-menu__call {
+      display: flex;
+      gap: 13px;
+      padding: 22px 0 24px; }
+      .nav-menu__call-phone {
+        color: #3F4255; }
+      .nav-menu__call-time {
+        font-weight: 400;
+        font-size: 12px; }
+
+.food-court {
+  padding: 72px 0;
+  /*height: 700px;*/
+  background: url(../images/png/bowl.png) no-repeat right;
+  background-position-y: top 72px; }
+  .food-court__order {
+    max-width: 536px;
+    margin-top: 120px; }
+  .food-court__title {
+    font-family: Poppins;
+    font-size: 58px;
+    font-weight: 300;
+    line-height: 64px;
+    letter-spacing: 0.05em;
+    margin-bottom: 88px; }
+  .food-court__buttons {
+    display: flex;
+    gap: 24px;
+    justify-content: flex-start; }
+  .food-court__button {
+    width: 118px;
+    height: 72px;
+    border: 2px solid #FFE145;
+    border-radius: 4px;
+    flex-direction: column;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .food-court__button-title {
+      font-family: MartelSans;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0.5px;
+      text-align: center; }
+    .food-court__button-subtitle {
+      font-family: MartelSans;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0px;
+      text-align: center; }
+  .food-court__characteristics {
+    max-width: 872px;
+    background: #FFFFFF;
+    margin: 276px 0 48px;
+    box-shadow: 0px 8px 40px 0px #00000014;
+    padding: 24px 24px 24px 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    font-family: MartelSans;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left; }
+    .food-court__characteristics-item {
+      display: flex;
+      gap: 16px; }
+  .food-court .restaurants {
+    overflow-x: hidden; }
+    .food-court .restaurants__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 48px; }
+    .food-court .restaurants__title {
+      font-family: Poppins;
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 64px;
+      letter-spacing: 0.08em; }
+    .food-court .restaurants__button {
+      width: 118px;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #F2F4FA;
+      color: #9093A6;
+      font-family: MartelSans;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0.5px; }
+    .food-court .restaurants__tape-photo {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .food-court .restaurants__tape-restaurant {
+      height: 112px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
+.tape {
+  position: relative;
+  display: flex;
+  gap: 24px; }
+  .tape .arrow-container {
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    background: #FFFFFF;
+    padding: 12px;
+    width: 48px;
+    height: 48px; }
+  .tape .arrow-left {
+    left: -24px; }
+  .tape .arrow-right {
+    right: -24px; }
+  .tape-item {
+    box-shadow: 0px 2px 16px 0px #3C3E4A14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+
+.find-rest {
+  background: #F2F4FA;
+  padding: 80px 0; }
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    padding: 0 40px; }
+
+  .food-court__characteristics {
+    padding: 24px; } }
+@media screen and (max-width: 767px) {
+  .wrapper {
+    padding: 0 24px; }
+
+  .main-page {
+    background: url(../images/png/bowl.png) no-repeat right;
+    background-position-y: top 72px;
+    background-position-x: right 110%; }
+
+  .food-court {
+    padding: 72px 0;
+    /*height: 700px;*/
+    background: none; }
+    .food-court__order {
+      max-width: 300px;
+      margin-top: 53px; }
+    .food-court__title {
+      font-size: 39px;
+      font-weight: 300;
+      line-height: 44px;
+      letter-spacing: 0.05em;
+      margin-bottom: 32px; }
+    .food-court__buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: flex-start; }
+    .food-court__button {
+      width: 177px;
+      height: 49px;
+      flex-direction: column; }
+      .food-court__button-title {
+        font-family: MartelSans;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        text-align: center; }
+      .food-court__button-subtitle {
+        font-family: MartelSans;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0px;
+        text-align: center; }
+    .food-court__characteristics {
+      max-width: 342px;
+      margin: 178px 0 100px;
+      box-shadow: 0px 8px 40px 0px #00000014;
+      padding: 22px;
+      flex-direction: column;
+      gap: 8px; }
+      .food-court__characteristics-item {
+        display: flex;
+        gap: 16px; }
+    .food-court .restaurants__head {
+      margin-bottom: 100px; }
+    .food-court .restaurants__title {
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 28px;
+      letter-spacing: 0.08em; } }
+
+/*# sourceMappingURL=style.css.map */
